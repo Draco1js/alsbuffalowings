@@ -1,26 +1,27 @@
 import { Box, Divider, Flex, Icon, Link, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
-import {GrFacebook} from "react-icons/gr";
-import { BsWhatsapp } from "react-icons/bs";
-import {AiOutlineHome} from 'react-icons/ai'
+import { GrFacebook } from "react-icons/gr";
+import { AiOutlineHome, AiOutlinePhone } from "react-icons/ai";
 
 const Footer: React.FC<{}> = () => {
   const router = useRouter();
 
   return (
     <>
-      <Divider
+      {/* <Divider
         css={{
           boxShadow: "1px 1px #888888",
         }}
         minWidth={"100vw"}
-      />
+      /> */}
       <Flex
+        margin={"0"}
+        padding={"0"}
         justify="space-between"
         m={4}
         overflowY={"hidden"}
-        minWidth={"90vw"}
+        bottom="0"
       >
         {/* HOME LG */}
         <Link
@@ -33,7 +34,7 @@ const Footer: React.FC<{}> = () => {
           <Icon>
             <AiOutlineHome />
           </Icon>
-          Home
+          Jump To Top
         </Link>
         {/* HOME LG END */}
         {/* HOME SM */}
@@ -52,14 +53,14 @@ const Footer: React.FC<{}> = () => {
 
         {/* WA LG */}
         <Link
-          onClick={() => router.push("https://wa.me/447913241703")}
+          href="tel:571-659-2166"
           as="button"
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "block", base: "none" }}
         >
           <Icon>
-            <BsWhatsapp />
+            <AiOutlinePhone />
           </Icon>
           Contact Us!
         </Link>
@@ -67,21 +68,21 @@ const Footer: React.FC<{}> = () => {
         {/* WA LG END */}
         {/* WA SM  */}
         <Link
-          onClick={() => router.push("https://wa.me/447913241703")}
+          href="tel:571-659-2166"
           as="button"
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "none", base: "block" }}
         >
           <Icon>
-            <BsWhatsapp />
+            <AiOutlinePhone />
           </Icon>
         </Link>
         {/* WA SMALL END */}
 
         {/* FB LG */}
         <Link
-          onClick={() => router.push("https://www.facebook.com/MRCOG.OVERSEAS")}
+          onClick={() => router.push("https://www.facebook.com/profile.php?id=100094749487503")}
           as="button"
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
@@ -96,7 +97,7 @@ const Footer: React.FC<{}> = () => {
 
         {/* FB SM */}
         <Link
-          onClick={() => router.push("https://www.facebook.com/MRCOG.OVERSEAS")}
+          onClick={() => router.push("https://www.facebook.com/profile.php?id=100094749487503")}
           as="button"
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
@@ -132,37 +133,6 @@ const Footer: React.FC<{}> = () => {
         >
           © DracoDev
         </Link>
-
-        {/* GH SM END */}
-
-        {/* <Box>
-          {auth ? (
-            <Box p={2}>
-              {!props.inCreate ? (<Link
-                p={2}
-                fontWeight="normal"
-                onClick={() => router.push('/quiz/create')}
-              >
-                Add new quiz
-              </Link>): null}
-              <Link p={2} onClick={() => signOut()}>
-                Logout
-              </Link>
-            </Box>
-          ) : (
-            <Box p={2}>
-              <Link
-                p={2}
-                onClick={() => router.push('/signin')}
-                fontWeight={
-                  router.pathname === '/signin' ? 'extrabold' : 'normal'
-                }
-              >
-                Sign In
-              </Link>
-            </Box>
-          )}
-        </Box> */}
       </Flex>
     </>
   );

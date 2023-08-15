@@ -7,6 +7,8 @@ import {
   IconButton,
   useColorMode,
   useColorModeValue,
+  Image,
+  Center,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
@@ -18,21 +20,31 @@ const Navbar: React.FC<{ inCreate?: Boolean }> = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Box zIndex="100" position="sticky" top="0" minWidth={"90vw"}>
+      <Box
+        className="navcolors"
+        zIndex="100"
+        position="sticky"
+        top="0"
+        minWidth={"90vw"}
+      >
         <Flex
           overflowY={"hidden"}
-          // flexDir={{ base: "column", md: "row" }}
-          p={{ base: 2, md: 7 }}
-          justify={{ base: "space-between", md: "flex-start" }}
-          backgroundColor={useColorModeValue("white", "gray.800")}
+          overflowX={"hidden"}
+          p={{ base: 1, md: 7 }}
+          justifyContent={"center"}
           alignItems="center"
           minWidth="100vw"
         >
-          <Heading onClick={() => router.push("/")} as="button" mr={"auto"}>
-            MRCOG Easy
-          </Heading>
-
-          <Flex alignItems={"center"} justifyContent={"flex-end"}>
+          <Center>
+            <Heading onClick={() => router.push("/")} as="button" mr={"auto"}>
+              <Image
+                src="/LogoNav.png"
+                alt="Company Logo"
+                height="6rem"
+              ></Image>
+            </Heading>
+          </Center>
+          {/* <Flex alignItems={"center"} justifyContent={"flex-end"}>
             <IconButton
               aria-label="Change Theme"
               variant={"ghost"}
@@ -40,14 +52,14 @@ const Navbar: React.FC<{ inCreate?: Boolean }> = (props) => {
               mr={10}
               icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
             />
-          </Flex>
+          </Flex> */}
         </Flex>
-        <Divider
+        {/* <Divider
           css={{
             boxShadow: "1px 1px #888888",
           }}
           minWidth={"100vw"}
-        />
+        /> */}
       </Box>
     </>
   );

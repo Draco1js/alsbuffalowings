@@ -1,7 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@font-face {
+  font-family: 'MyFont';
+  src:
+      url('/LocalBrewery.otf') 
+      format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-*{
-  font-family: 'Roboto', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "MyFont", sans-serif;
+}
+
+.bodycolors {
+  background-color: #223f3b;
+  color: #bcc1c0;
+}
+
+.navcolors {
+  background-color: #193833;
+  color: #dcdcdc;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #193833;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dcdcdc;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bcc1c0;
 }
 
 .embed-responsive {
@@ -29,7 +70,4 @@
 }
 .embed-responsive-4by3 {
   padding-bottom: 75%;
-}
-.whiteBack{
-  background-color: white;
 }

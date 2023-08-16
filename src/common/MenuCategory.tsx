@@ -18,11 +18,19 @@ const MenuCategory: React.FC<MenuCategoryProps> = ({
   imageSrc,
 }) => {
   return (
-    <Box mt={6}>
-      <Heading size="md" className="beaver">
+    <Box p={2}>
+      <Heading
+        as="h2"
+        fontSize={["lg", "xl"]}
+        mb={2}
+        fontWeight={"extrabold"}
+        className="beaver"
+      >
         {categoryName}
       </Heading>
-      {imageSrc && <Image src={imageSrc} alt={categoryName} mb={2} />}
+      {imageSrc && (
+        <Image src={imageSrc} alt={categoryName} mb={2} maxW="100%" /> // Adjust image width
+      )}
       <SimpleGrid columns={2} spacing={4} mt={2}>
         {Object.entries(items).map(([itemName, itemData]) => (
           <MenuItem

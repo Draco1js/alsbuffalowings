@@ -34,26 +34,29 @@ const MainMenu: React.FC<MainMenuProps> = ({ menuData }) => {
   const categorizedItems = Object.entries(menuData);
 
   return (
-    <Box display="grid" gridTemplateColumns="repeat(2, 1fr)" gap={4}>
-      {categorizedItems.map(([categoryName, categoryData]) => (
-        <Box key={categoryName}>
-          <MenuCategory
-            categoryName={categoryName}
-            items={categoryData}
-            imageSrc={`/images/${categoryName
-              .toLowerCase()
-              .replace(/ /g, "-")}.jpg`}
-          />
-          {categoryName === "Al's Paratha Rolls" && (
-            <SpecialNote noteText="Enjoy our delicious Paratha Rolls with a variety of flavors!" />
-          )}
-          {categoryName === "Al's Wings" && (
-            <SpecialNote noteText="Try our mouthwatering Wings in various flavors!" />
-          )}
-        </Box>
-      ))}
+    <Box px={2}>
+      {/* Add padding to improve mobile readability */}
+      <SimpleGrid columns={[1, 2]} spacing={4}>
+        {/* Adjust columns based on screen width */}
+        {categorizedItems.map(([categoryName, categoryData]) => (
+          <Box key={categoryName}>
+            <MenuCategory
+              categoryName={categoryName}
+              items={categoryData}
+              imageSrc={`/images/${categoryName
+                .toLowerCase()
+                .replace(/ /g, "-")}.jpg`}
+            />
+            {categoryName === "Al's Paratha Rolls" && (
+              <SpecialNote noteText="Enjoy our delicious Paratha Rolls with a variety of flavors!" />
+            )}
+            {categoryName === "Al's Wings" && (
+              <SpecialNote noteText="Try our mouthwatering Wings in various flavors!" />
+            )}
+          </Box>
+        ))}
+      </SimpleGrid>
     </Box>
   );
 };
-
 export default MainMenu;

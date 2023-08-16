@@ -1,6 +1,6 @@
 {
   "name": "alsbuffalowings",
-  "version": "0.1.0",
+  "version": "0.9.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -22,7 +22,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "typescript": "^4.2.3",
-    "yup": "^0.32.11"
+    "typescript": "^4.2.3"
   }
 }

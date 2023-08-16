@@ -1,6 +1,5 @@
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { AppProps } from "next/app";
-import { useEffect } from "react";
 import theme from '../utils/theme'
 import "./styles.css";
 

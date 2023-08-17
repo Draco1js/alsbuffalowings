@@ -39,6 +39,29 @@ const Home = (props) => {
         <Head>
           <title>Al&apos;s Buffalo Wings</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="Browse our delicious menu offerings."
+          />
+
+          {/* Open Graph tags */}
+          <meta property="og:title" content="Al's Buffalo Wings" />
+          <meta
+            property="og:description"
+            content="Explore our tasty menu items and order today!."
+          />
+          <meta property="og:image" content="/Al's Buffalo Wings-logos.jpeg" />
+          <meta property="og:url" content="https://alsbuffalowings.com" />
+
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="/Al's Buffalo Wings-logos.jpeg" />
+          <meta name="twitter:title" content="Al's Buffalo Wings" />
+          <meta
+            name="twitter:description"
+            content="Discover our mouthwatering dishes and order today@."
+          />
+          <meta name="twitter:image" content="/Al's Buffalo Wings-logos.jpeg" />
+          <meta name="twitter:url" content="https://alsbuffalowings.com" />
         </Head>
         <main>
           <header>

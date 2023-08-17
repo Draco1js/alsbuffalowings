@@ -8,7 +8,7 @@ interface MenuItemData {
   combo?: string;
 }
 
-const SteakStrings = `Note: Available
+const STEAKSTRING = `Note: Available
 All Steak & Cheese Comes with meat & Cheese Only
 Cheeses:
 Available Topinas:
@@ -34,24 +34,27 @@ const MainMenu: React.FC<MainMenuProps> = ({ menuData }) => {
   const categorizedItems = Object.entries(menuData);
 
   return (
-    <Box px={2}>
+    <Box px={2} mt={"6rem"}>
       {/* Add padding to improve mobile readability */}
       <SimpleGrid columns={[1, 2]} spacing={4}>
         {/* Adjust columns based on screen width */}
         {categorizedItems.map(([categoryName, categoryData]) => (
-          <Box key={categoryName}>
+          <Box key={categoryName} id={categoryName.toLowerCase().replace(/ /g, "-")}>
             <MenuCategory
               categoryName={categoryName}
               items={categoryData}
               imageSrc={`/images/${categoryName
                 .toLowerCase()
-                .replace(/ /g, "-")}.jpg`}
+                .replace(/ /g, "-")}.png`}
             />
-            {categoryName === "Al's Paratha Rolls" && (
-              <SpecialNote noteText="Enjoy our delicious Paratha Rolls with a variety of flavors!" />
+            {categoryName === "Al's Salads" && (
+              <SpecialNote noteText={SALADSTRING} />
             )}
             {categoryName === "Al's Wings" && (
-              <SpecialNote noteText="Try our mouthwatering Wings in various flavors!" />
+              <SpecialNote noteText={WINGSTRING} />
+            )}
+            {categoryName === "Al's Steaks & Cheese" && (
+              <SpecialNote noteText={STEAKSTRING} />
             )}
           </Box>
         ))}

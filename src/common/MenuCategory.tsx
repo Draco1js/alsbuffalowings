@@ -1,5 +1,14 @@
-import { Box, Heading, Image, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
+
+const otherCategories = ["Side Order"];
 
 interface MenuItemData {
   standard: string;
@@ -21,15 +30,27 @@ const MenuCategory: React.FC<MenuCategoryProps> = ({
     <Box p={2}>
       <Heading
         as="h2"
-        fontSize={["lg", "xl"]}
+        fontSize={["xl", "2xl"]}
         mb={2}
         fontWeight={"extrabold"}
-        className="beaver"
+        className="notescolors"
+        p={4}
+        rounded={"md"}
+        textAlign={"center"}
       >
         {categoryName}
       </Heading>
       {imageSrc && (
-        <Image src={imageSrc} alt={categoryName} mb={2} maxW="100%" /> // Adjust image width
+        <Center>
+          <Image
+            src={imageSrc}
+            alt={categoryName}
+            mb={2}
+            mt={2}
+            maxW="100%"
+            maxH="15rem"
+          />
+        </Center>
       )}
       <SimpleGrid columns={2} spacing={4} mt={2}>
         {Object.entries(items).map(([itemName, itemData]) => (
@@ -37,7 +58,8 @@ const MenuCategory: React.FC<MenuCategoryProps> = ({
             key={itemName}
             name={itemName}
             standardPrice={itemData.standard}
-            comboPrice={itemData.combo || "N/A"} // Use a default value or "N/A"
+            comboPrice={itemData.combo || null}
+            type={otherCategories.includes(categoryName, 0) ? "1" : "0"}
           />
         ))}
       </SimpleGrid>

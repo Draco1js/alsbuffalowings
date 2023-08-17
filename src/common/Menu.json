@@ -1,38 +1,38 @@
 {
   "Al's Rice Platters": {
-    "Rice Plater With Chicken Tikka": {
+    "Rice Platter With Chicken Tikka": {
       "standard": "$11.99",
       "combo": "$15.99"
     },
-    "Rice Plater With Lamb Tika": {
+    "Rice Platter With Lamb Tika": {
       "standard": "$15.99",
       "combo": "$19.99"
     },
-    "Rice Plater With Seekh Kabab": {
+    "Rice Platter With Seekh Kabab": {
       "standard": "$12.99",
       "combo": "$16.99"
     },
-    "Rice Plater With House Special Chicken": {
+    "Rice Platter With House Special Chicken": {
       "standard": "$11.99",
       "combo": "$15.99"
     },
-    "Rice Plater With House Special Beef": {
+    "Rice Platter With House Special Beef": {
       "standard": "$12.99",
       "combo": "$16.99"
     },
-    "Rice Plater With Meat Bite's": {
+    "Rice Platter With Meat Bite's": {
       "standard": "$10.99",
       "combo": "$14.99"
     },
-    "Rice Plater With Falafel": {
+    "Rice Platter With Falafel": {
       "standard": "$9.99",
       "combo": "$ 13.99"
     },
-    "Rice Plater With Chapli (chicken/beef)": {
+    "Rice Platter With Chapli (chicken/beef)": {
       "standard": "$12.99",
       "combo": "$16.99"
     },
-    "Rice Plater With Gyro (chicken/lamb & Beef)": {
+    "Rice Platter With Gyro (chicken/lamb & Beef)": {
       "standard": "$11.99",
       "combo": "$15.99"
     }
@@ -111,7 +111,7 @@
     }
   },
   "Al's Wings": {
-    "Wings ( 6 Pieces )": {
+    "Wings (6 Pieces)": {
       "standard": "$8.99",
       "combo": "$12.99"
     },

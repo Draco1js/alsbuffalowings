@@ -18,13 +18,26 @@
   color: #B48B7D
 }
 
+.darkgreen {
+  color: #193833;
+}
+
+.darkslategreen {
+  color: #223f3b;
+}
+
 .vanilla{
   color: #FFF9A5;
 }
 
+.platinum {
+  color: #dcdcdc;
+}
+
 .notescolors {
-  color: #FFF9A5;
-  background-color: #B48B7D;
+  font-weight: 900;
+  color: #3e3c3c;
+  background-color: #c78d7c;
 }
 
 .bodycolors {

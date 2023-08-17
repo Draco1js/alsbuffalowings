@@ -39,6 +39,7 @@ const Home = (props) => {
         <Head>
           <title>Al&apos;s Buffalo Wings</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta name="google-site-verification" content="FPiDP8CldoHvL0YkFAYoDKcfMoPpzFXOM4YfDoCyiQw" />
           <meta
             name="description"
             content="Browse our delicious menu offerings."

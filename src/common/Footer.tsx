@@ -30,6 +30,7 @@ const Footer: React.FC<{}> = () => {
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "block", base: "none" }}
+          aria-label="Jump to the top of the page!"
         >
           <Icon>
             <AiOutlineHome />
@@ -44,6 +45,7 @@ const Footer: React.FC<{}> = () => {
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "none", base: "block" }}
+          aria-label="Jump to the top of the page!"
         >
           <Icon>
             <AiOutlineHome />
@@ -58,6 +60,7 @@ const Footer: React.FC<{}> = () => {
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "block", base: "none" }}
+          aria-label="Call Us!"
         >
           <Icon>
             <AiOutlinePhone />
@@ -73,6 +76,7 @@ const Footer: React.FC<{}> = () => {
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "none", base: "block" }}
+          aria-label="Call Us!"
         >
           <Icon>
             <AiOutlinePhone />
@@ -82,11 +86,16 @@ const Footer: React.FC<{}> = () => {
 
         {/* FB LG */}
         <Link
-          onClick={() => router.push("https://www.facebook.com/profile.php?id=100094749487503")}
+          onClick={() =>
+            router.push(
+              "https://www.facebook.com/profile.php?id=100094749487503"
+            )
+          }
           as="button"
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "block", base: "none" }}
+          aria-label="Facebook Page"
         >
           <Icon>
             <GrFacebook />
@@ -97,11 +106,16 @@ const Footer: React.FC<{}> = () => {
 
         {/* FB SM */}
         <Link
-          onClick={() => router.push("https://www.facebook.com/profile.php?id=100094749487503")}
+          onClick={() =>
+            router.push(
+              "https://www.facebook.com/profile.php?id=100094749487503"
+            )
+          }
           as="button"
           alignItems="flex-start"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "none", base: "block" }}
+          aria-label="Facebook Page"
         >
           <Icon>
             <GrFacebook />
@@ -116,6 +130,7 @@ const Footer: React.FC<{}> = () => {
           alignItems="flex-end"
           fontSize={{ base: "sm", sm: "md", md: "lg" }}
           display={{ md: "block", base: "none" }}
+          aria-label="Copy-right Owner"
         >
           ©DracoDev MMXXII All rights reserved
         </Link>
@@ -130,6 +145,7 @@ const Footer: React.FC<{}> = () => {
           alignItems="flex-end"
           fontSize={{ base: "x-small", sm: "md", md: "lg" }}
           display={{ md: "none", base: "block" }}
+          aria-label="Copy-right Owner"
         >
           © DracoDev
         </Link>

@@ -45,7 +45,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ menuData }) => {
               items={categoryData}
               imageSrc={`/images/${categoryName
                 .toLowerCase()
-                .replace(/ /g, "-")}.png`}
+                .replace(/ /g, "-")}.webp`}
             />
             {categoryName === "Al's Salads" && (
               <SpecialNote noteText={SALADSTRING} />

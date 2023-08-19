@@ -38,7 +38,7 @@ const Navbar: React.FC<{ inCreate?: Boolean }> = (props) => {
           <Center>
             <Heading onClick={() => router.push("/")} as="button" mr={"auto"}>
               <Image
-                src="/LogoNav.png"
+                src="/LogoNav.webp"
                 alt="Company Logo"
                 height="6rem"
               ></Image>

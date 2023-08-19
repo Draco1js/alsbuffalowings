@@ -38,7 +38,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({ categories }) => {
                   maxW={"30rem"}
                   src={`/images/${category
                     .toLowerCase()
-                    .replace(/ /g, "-")}.png`}
+                    .replace(/ /g, "-")}.webp`}
                   alt={category}
                 />
               </a>

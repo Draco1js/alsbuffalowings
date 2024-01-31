@@ -21,6 +21,7 @@ const ContactInfo: React.FC = () => {
       <Text fontSize={"1.5rem"}>Address: 5860 Mapledale Plaza, Dale City, VA 22193</Text>
     </Box>
   );
+  
 };
 
 export default ContactInfo;
